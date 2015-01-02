@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de rechercher un médecin
+ */
+
 include_once('../header.php');
 
 if (!empty($_GET)) {

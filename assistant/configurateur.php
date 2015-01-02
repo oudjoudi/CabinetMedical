@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'enregistrer et vérifier la configuration interne du programme
+ */
+
 if (!empty($_POST)) {
 
     // Enregistrement de la configuration

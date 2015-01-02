@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher le haut de page
+ */
+
 // Chargement des paramètres de configuration
 include_once('config/config.inc.php');
 include_once('class/form.class.php');

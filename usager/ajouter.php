@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de traiter le formulaire d'ajout d'un usager
+ */
+
 include("../config/config.inc.php");
 
 session_start();

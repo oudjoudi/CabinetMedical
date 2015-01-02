@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher les statistiques par usager
+ */
+
 include_once('../header.php');
 
 try {

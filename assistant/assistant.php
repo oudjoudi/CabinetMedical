@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de gérer la configuration interne du programme
+ */
+
 include_once('../class/form.class.php');
 
 if (file_exists(dirname(__FILE__) . '/../config/configuration.xml')) {

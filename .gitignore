@@ -64,4 +64,5 @@ crashlytics-build.properties
 # sftp configuration file
 sftp-config.json
 
-
+# Fichier de configuration
+config/configuration.xml

@@ -1,6 +1,10 @@
 <?php
 
 /*
+ * Fichier de configuration
+ */
+
+/*
    Chargement de la configuration depuis XML
    Utilisation de la bibliothèque SimpleXML, plus légère que DOM et qui n'est pas pertinante pour l'usage ici
 */

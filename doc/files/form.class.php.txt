@@ -8,6 +8,9 @@
 class Form
 {
 
+    /**
+     * @var null|string Stocke la chaine de caractère complète du formulaire
+     */
     private $form = null;
 
     /**

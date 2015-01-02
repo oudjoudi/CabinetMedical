@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher la page d'accueil
+ */
+
 include('header.php');
 
 ?>

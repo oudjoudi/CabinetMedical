@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de rechercher une consultation
+ */
+
 include_once('../header.php');
 
 try {

@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de supprimer une consultation
+ */
+
 include('../config/config.inc.php');
 
 if (!empty($_GET['id'])) {

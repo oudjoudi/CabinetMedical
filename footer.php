@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher le pied de page
+ */
+
 include('config/config.inc.php');
 
 ?>

@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de supprimer un médecin
+ */
+
 include('../config/config.inc.php');
 
 if (!empty($_GET['id'])) {

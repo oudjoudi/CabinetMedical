@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de modifier une consultation
+ */
+
 include('../config/config.inc.php');
 
 try {

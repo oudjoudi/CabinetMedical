@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de modifier un usager
+ */
+
 include('../config/config.inc.php');
 
 try {

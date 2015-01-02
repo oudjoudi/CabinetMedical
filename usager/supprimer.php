@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de supprimer un usager
+ */
+
 include('../config/config.inc.php');
 
 if (!empty($_GET['id'])) {

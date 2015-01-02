@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de s'authentifier
+ */
+
 include('config/config.inc.php');
 
 

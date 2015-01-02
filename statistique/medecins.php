@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher les statistiques par médecin
+ */
+
 include_once('../header.php');
 
 try {

@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet d'afficher le formulaire d'ajout d'une consultation
+ */
+
 include_once('../header.php');
 
 try {

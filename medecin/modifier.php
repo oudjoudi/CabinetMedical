@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Permet de modifier un médecin
+ */
+
 include('../config/config.inc.php');
 
 try {
