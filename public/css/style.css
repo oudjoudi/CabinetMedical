@@ -1,0 +1,22 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.theme-dropdown {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.theme-showcase .navbar {
+    width: auto;
+}
+
+.bg-success, .bg-info, .bg-warning, .bg-danger {
+    padding:15px;
+}
