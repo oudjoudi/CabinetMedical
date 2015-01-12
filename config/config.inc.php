@@ -9,7 +9,9 @@
    Utilisation de la bibliothèque SimpleXML, plus légère que DOM et qui n'est pas pertinante pour l'usage ici
 */
 $nomFichier = dirname(__FILE__) . "/configuration.xml";
-$xml = simplexml_load_file($nomFichier) or header('Location: assistant/assistant.php');
+if (!$xml = simplexml_load_file($nomFichier)) {
+    header('Location: assistant/assistant.php');
+}
 
 // On cast toutes les variables car les données sont de types SimpleXMLElement, or lors du login, on met un ===,
 // ce qui pose problème lors de la vérification du typage
