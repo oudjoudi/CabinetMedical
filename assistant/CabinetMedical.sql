@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS USAGERS
 (
   id            INT(11)      NOT NULL AUTO_INCREMENT,
-  id_referent   BIGINT(4)    NOT NULL,
+  id_referent   INT(11)    NOT NULL,
   civilite      VARCHAR(5)   NULL,
   nom           VARCHAR(255) NULL,
   prenom        VARCHAR(255) NULL,
