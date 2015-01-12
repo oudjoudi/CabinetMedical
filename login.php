@@ -26,12 +26,12 @@ if (isset($_SESSION['connecté']) && $_SESSION['connecté'] == true) {
 }
 session_destroy();
 
+include('header.php');
+
 $form = new Form("Identification", "post", "");
 $form->setInput("Nom d'utilisateur", "username", "text");
 $form->setInput("Mot de passe", "password", "password");
 $form->setButton("Connexion", "submit", "submit", "btn btn-primary");
-
-include('header.php');
 
 echo $form->getForm();
 

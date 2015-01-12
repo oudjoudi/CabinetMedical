@@ -56,7 +56,7 @@ foreach ($parametresUsager as $cle => $parametre) {
     if ($parametre == "dateNaissance") {
         $form->setInput($cle, $parametre, "text", (!empty($_GET[$parametre])) ? $_GET[$parametre] : '', "id='dateNaissance'");
     } elseif ($parametre == "civilite") {
-        $form->setSelect($cle, $parametre, array('Mr' => 'Mr', 'Mme' => 'Mme', 'Mlle' => 'Mlle'));
+        $form->setSelect($cle, $parametre, array('' => 'Tous', 'Mr' => 'Mr', 'Mme' => 'Mme', 'Mlle' => 'Mlle'));
     } else {
         $form->setInput($cle, $parametre, "text", (!empty($_GET[$parametre])) ? $_GET[$parametre] : '', null);
     }

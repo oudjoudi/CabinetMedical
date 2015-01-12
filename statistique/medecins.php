@@ -14,7 +14,7 @@ try {
     exit;
 }
 
-$querySearch = $linkpdo->prepare("SELECT m.civilite, m.nom, m.prenom, SUM(c.dureeConsult) as TotalConsult
+$querySearch = $linkpdo->prepare("SELECT m.civilite, m.nom, m.prenom, SEC_TO_TIME(SUM(c.dureeConsult)*60) as TotalConsult
 FROM MEDECINS m, CONSULTATION c
 WHERE c.medecin = m.id
 GROUP BY m.civilite, m.nom, m.prenom");
@@ -41,7 +41,7 @@ $resultats = $querySearch->fetchAll();
         <tbody>
         <?php
             foreach ($resultats as $res) {
-                $heures = DateTime::createFromFormat('i', $res['TotalConsult'])->format('H\hi');
+                $heures = DateTime::createFromFormat("H:i:s", $res['TotalConsult'])->format('H\hi');
                 echo '<tr>';
                 echo "<td>" . $res['civilite'] . " " . $res['nom'] . " " . $res['prenom'] . "</td>";
                 echo "<td>" . $heures . "</td>";

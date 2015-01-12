@@ -16,39 +16,39 @@ try {
 
 $querySearch = $linkpdo->prepare("SELECT
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE civilite = 'Mr'
     AND DATEDIFF(CURDATE(), dateNaissance) < 25*365
 ) as HM25,
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE civilite = 'Mr'
     AND DATEDIFF(CURDATE(), dateNaissance) >= 25*365
     AND DATEDIFF(CURDATE(), dateNaissance) < 50*365
 ) as HE25ET50,
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE civilite = 'Mr'
     AND DATEDIFF(CURDATE(), dateNaissance) >= 50*365
 ) as HP50,
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE (civilite = 'Mme' OR civilite = 'Mlle')
     AND DATEDIFF(CURDATE(), dateNaissance) < 25*365
 ) as FM25,
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE (civilite = 'Mme' OR civilite = 'Mlle')
     AND DATEDIFF(CURDATE(), dateNaissance) >= 25*365
     AND DATEDIFF(CURDATE(), dateNaissance) < 50*365
 ) as FE25ET50,
 (
-    SELECT COUNT(*)
+    SELECT ROUND(COUNT(*)/(SELECT COUNT(*) FROM USAGERS)*100, 1)
     FROM USAGERS
     WHERE (civilite = 'Mme' OR civilite = 'Mlle')
     AND DATEDIFF(CURDATE(), dateNaissance) >= 50*365
@@ -77,18 +77,18 @@ $resultats = $querySearch->fetchAll()['0'];
     <tbody>
         <tr>
             <td>Moins de 25 ans</td>
-            <td><?php echo($resultats['HM25']); ?></td>
-            <td><?php echo($resultats['FM25']); ?></td>
+            <td><?php echo($resultats['HM25']); ?>%</td>
+            <td><?php echo($resultats['FM25']); ?>%</td>
         </tr>
         <tr>
             <td>Entre 25 et 50 ans</td>
-            <td><?php echo($resultats['HE25ET50']); ?></td>
-            <td><?php echo($resultats['FE25ET50']); ?></td>
+            <td><?php echo($resultats['HE25ET50']); ?>%</td>
+            <td><?php echo($resultats['FE25ET50']); ?>%</td>
         </tr>
         <tr>
             <td>Plus de 50 ans</td>
-            <td><?php echo($resultats['HP50']); ?></td>
-            <td><?php echo($resultats['FP50']); ?></td>
+            <td><?php echo($resultats['HP50']); ?>%</td>
+            <td><?php echo($resultats['FP50']); ?>%</td>
         </tr>
     </tbody>
 </table>

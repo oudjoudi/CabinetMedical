@@ -5,6 +5,8 @@
  */
 
 require('../config/config.inc.php');
+require_once('../class/form.class.php');
+
 
 try {
     $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);
@@ -22,6 +24,8 @@ foreach ($parametresMedecin as $cle => $parametre) {
 }
 $form->setButton("Envoyer", "envoyer", "submit", "btn btn-primary");
 $form->setButton("Vider", "vider", "reset", "btn btn-warning");
+
+include('../header.php');
 
 echo $form->getForm();
 

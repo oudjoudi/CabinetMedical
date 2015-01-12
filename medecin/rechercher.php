@@ -5,6 +5,7 @@
  */
 
 require('../config/config.inc.php');
+require_once('../class/form.class.php');
 
 if (!empty($_GET)) {
     try {
@@ -37,6 +38,8 @@ if (!empty($_GET)) {
 } else {
     $resultats = null;
 }
+
+include('../header.php');
 
 ?>
 

@@ -5,6 +5,7 @@
  */
 
 require('../config/config.inc.php');
+require_once('../class/form.class.php');
 
 try {
     $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);
@@ -41,6 +42,8 @@ if (!empty($_GET)) {
 } else {
     $resultats = null;
 }
+
+include('../header.php');
 
 ?>
 
