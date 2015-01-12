@@ -32,6 +32,8 @@ if (basename($_SERVER['PHP_SELF']) !== 'login.php' && $_SESSION['connecté'] !==
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cabinet Médical</title>
 
+    <link rel="icon" href="<?php echo $siteurl; ?>/public/img/favicon.ico" />
+
     <!-- Bootstrap -->
     <link href="<?php echo $siteurl; ?>/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo $siteurl; ?>/public/css/style.css" rel="stylesheet">
