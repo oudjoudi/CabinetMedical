@@ -4,7 +4,7 @@
  * Permet d'afficher le pied de page
  */
 
-include('config/config.inc.php');
+require('config/config.inc.php');
 
 ?>
 

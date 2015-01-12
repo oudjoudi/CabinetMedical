@@ -4,7 +4,7 @@
  * Permet d'afficher le formulaire d'ajout d'une consultation
  */
 
-include_once('../header.php');
+require('../config/config.inc.php');
 
 try {
     $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);

@@ -4,7 +4,7 @@
  * Permet de s'authentifier
  */
 
-include('config/config.inc.php');
+require('config/config.inc.php');
 
 
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
@@ -26,12 +26,12 @@ if (isset($_SESSION['connecté']) && $_SESSION['connecté'] == true) {
 }
 session_destroy();
 
-include('header.php');
-
 $form = new Form("Identification", "post", "");
 $form->setInput("Nom d'utilisateur", "username", "text");
 $form->setInput("Mot de passe", "password", "password");
 $form->setButton("Connexion", "submit", "submit", "btn btn-primary");
+
+include('header.php');
 
 echo $form->getForm();
 

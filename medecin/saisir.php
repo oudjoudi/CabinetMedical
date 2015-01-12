@@ -4,11 +4,12 @@
  * Permet d'afficher le formulaire d'ajout d'un médecin
  */
 
-include_once('../header.php');
+require('../config/config.inc.php');
 
 try {
     $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);
 } catch (PDOException $e) {
+    include('../header.php');
     echo "<div class='alert alert-danger' role='alert'>Erreur lors de la connexion à la BDD. Erreur : " . $e->getMessage() . "</div>";
     include('../footer.php');
     exit;

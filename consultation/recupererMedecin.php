@@ -4,7 +4,7 @@
  * Permet de récupérer les médecins et le référent d'un usager en AJAX
  */
 
-include('../config/config.inc.php');
+require('../config/config.inc.php');
 
 session_start();
 if ($_SESSION['connecté'] != true) {

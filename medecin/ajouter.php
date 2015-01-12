@@ -4,7 +4,7 @@
  * Permet de traiter le formulaire d'ajout d'un médecin
  */
 
-include("../config/config.inc.php");
+require("../config/config.inc.php");
 
 session_start();
 if ($_SESSION['connecté'] != true) {

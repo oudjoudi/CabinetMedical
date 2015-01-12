@@ -4,7 +4,7 @@
  * Permet de modifier une consultation
  */
 
-include('../config/config.inc.php');
+require('../config/config.inc.php');
 
 try {
     $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);

@@ -9,7 +9,7 @@ include_once('../class/form.class.php');
 if (file_exists(dirname(__FILE__) . '/../config/configuration.xml')) {
     session_start();
     if (!isset($_SESSION['connecté']) || $_SESSION['connecté'] != true) {
-        include('../config/config.inc.php');
+        require('../config/config.inc.php');
         header("Location: $siteurl/login.php?warning=Veuillez vous connecter pour accéder à cette page");
         exit;
     }

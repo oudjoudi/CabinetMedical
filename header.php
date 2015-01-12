@@ -5,8 +5,8 @@
  */
 
 // Chargement des paramètres de configuration
-include_once('config/config.inc.php');
-include_once('class/form.class.php');
+require_once('config/config.inc.php');
+require_once('class/form.class.php');
 
 
 session_start();

@@ -4,7 +4,7 @@
  * Permet de supprimer un usager
  */
 
-include('../config/config.inc.php');
+require('../config/config.inc.php');
 
 if (!empty($_GET['id'])) {
     try {
