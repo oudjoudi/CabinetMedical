@@ -9,6 +9,7 @@ Il comprend un assistant pour vous aider à installer le système.
 - Création d'usagers, de médecins et de consultations
 - Affichage de statistiques
 - Sécurisation par identifiant et mot de passe
+- Numéro de sécurité international
 
 ## A faire
 Ces différentes tâches pourront être faites dans la continuité du PPN
