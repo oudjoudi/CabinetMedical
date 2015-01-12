@@ -1,5 +1,7 @@
 # Cabinet Médical
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d9985748-5362-4d58-adf3-db3009399431/big.png)](https://insight.sensiolabs.com/projects/d9985748-5362-4d58-adf3-db3009399431)
+
 Ce projet de gestionnaire de cabinet médical a été développé par Guillaume RODRIGUEZ ([@guiguidu31300](https://twitter.com/guiguidu31300)) et Julien DOUSSEAUD, dans le cadre de l'enseignement du DUT Informatique.
 Le système nécessite au minimum PHP 5.4 et une base de données SQL (MySQL, PostgreSQL, SQL Server, ...).
 Il comprend un assistant pour vous aider à installer le système.
