@@ -17,7 +17,7 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-if (basename($_SERVER['PHP_SELF']) != 'login.php' && $_SESSION['connecté'] != true) {
+if (basename($_SERVER['PHP_SELF']) !== 'login.php' && $_SESSION['connecté'] !== true) {
     header("Location: $siteurl/login.php?warning=Veuillez vous connecter pour accéder à cette page");
     exit;
 }
@@ -99,7 +99,7 @@ if (basename($_SERVER['PHP_SELF']) != 'login.php' && $_SESSION['connecté'] != t
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                if (isset($_SESSION['connecté']) && $_SESSION['connecté'] == true) {
+                if (isset($_SESSION['connecté']) && $_SESSION['connecté'] === true) {
                     echo "<li><button type='button' class='btn btn-default navbar-btn navbar-inverse'><a href='$siteurl/index.php?logout'><span class='glyphicon glyphicon-off' aria-hidden='true'></span>  Se déconnecter</a></button></li>";
                 }
                 ?>

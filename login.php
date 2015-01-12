@@ -20,7 +20,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 }
 
 session_start();
-if (isset($_SESSION['connecté']) && $_SESSION['connecté'] == true) {
+if (isset($_SESSION['connecté']) && $_SESSION['connecté'] === true) {
     header("Location: $siteurl/index.php?warning=Vous êtes déjà connecté !");
     exit;
 }

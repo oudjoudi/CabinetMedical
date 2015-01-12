@@ -48,7 +48,7 @@ class Form
      */
     public function setInput($label, $name, $type = "text", $value = null, $option = null)
     {
-        if ($label == null) {
+        if ($label === null) {
             $this->form .= '<div class="form-group"><input type="' . $type . '" name="' . $name . '" value="' . $value . '" ' . $option . ' ></div>';
         } else {
             $this->form .= '<div class="form-group"><label for="' . $name . '" class="col-sm-2 control-label">' . $label . '</label><div class="col-sm-10"><input type="' . $type . '" name="' . $name . '" value="' . $value . '" ' . $option . ' ></div></div>';
@@ -67,7 +67,7 @@ class Form
     public function setSelect($label, $name, array $options, $prefered = null, $optionsHTML = null)
     {
         $this->form .= '<div class="form-group"><label for="' . $name . '" class="col-sm-2 control-label">' . $label . '</label><div class="col-sm-10"><select name="' . $name . '" ' . $optionsHTML .'>';
-        if ($prefered != null) {
+        if ($prefered !== null) {
             $this->form .= '<option value="' . $prefered . '">' . $options[$prefered] . '</option>';
             $this->form .= '<option disabled>──────────</option>';
             unset($options[$prefered]);

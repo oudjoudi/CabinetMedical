@@ -7,7 +7,7 @@
 require('../config/config.inc.php');
 
 session_start();
-if ($_SESSION['connecté'] != true) {
+if ($_SESSION['connecté'] !== true) {
     header("Location: $siteurl/login.php?warning=Veuillez vous connecter pour accéder à cette page");
     exit;
 }

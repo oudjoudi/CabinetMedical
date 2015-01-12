@@ -27,8 +27,12 @@ if (!empty($_POST)) {
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
     $dom->loadXML($docXML->asXML());
-    $dom->schemaValidate(dirname(__FILE__) . "/../config/configuration.xsd") or die("Erreur lors de la validation du fichier de configuration");
-    $dom->save(dirname(__FILE__) . "/../config/configuration.xml") or die("Erreur lors de l'écriture du fichier de configuration");
+    if (!$dom->schemaValidate(dirname(__FILE__) . "/../config/configuration.xsd")) {
+        throw new Exception("Erreur lors de la validation du fichier de configuration");
+    }
+    if (!$dom->save(dirname(__FILE__) . "/../config/configuration.xml")) {
+        throw new Exception("Erreur lors de l'écriture du fichier de configuration");
+    };
 
     // Installation de la base de données sur le serveur SQL
     try {
@@ -38,7 +42,7 @@ if (!empty($_POST)) {
         $mdp = $_POST['pass'];
         $linkpdo = new PDO("mysql:host=$server;dbname=$db", $login, $mdp);
     } catch (PDOException $e) {
-        die("Erreur lors de la connexion à la BDD. Erreur : " . $e->getMessage());
+        throw new Exception("Erreur lors de la connexion à la BDD. Erreur : " . $e->getMessage());
     }
 
     $temp = '';
@@ -52,12 +56,14 @@ if (!empty($_POST)) {
 
         // On cherche les point-virgules pour les fins de requêtes
         if (substr(trim($ligne), -1, 1) == ';') {
-            $linkpdo->query($temp) or die("Erreur lors de l'importation de la base de données");
+            if (!$linkpdo->query($temp)) {
+                throw new Exception("Erreur lors de l'importation de la base de données");
+            }
             $temp = '';
         }
     }
     header('Location: ../index.php?success=Le cabinet médical est bien installé');
 
 } else {
-    die("Vous ne pouvez pas accéder à cette page directement");
+    throw new Exception("Vous ne pouvez pas accéder à cette page directement");
 }
